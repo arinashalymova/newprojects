@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    float oxygenLevel;
+
+    printf("Введите уровень кислорода (в процентах): ");
+    scanf("%f", &oxygenLevel);
+
+    if (oxygenLevel < 15.0) {
+        printf("Включите аварийную систему!\n");
+    } else {
+        printf("Уровень кислорода в норме.\n");
+    }
+
+    return 0;
+}

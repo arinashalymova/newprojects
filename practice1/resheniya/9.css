@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    double T;
+    printf("Введите время в секундах: ");
+    scanf("%lf", &T);
+
+    int minutes = (int)T / 60;
+    double seconds = T - (minutes * 60);
+
+    printf("%d минута(ы) %.1f секунд(ы)\n", minutes, seconds);
+
+    return 0;
+}

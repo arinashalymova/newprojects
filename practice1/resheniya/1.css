@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int mass;
+    printf("Введите вашу массу тела в килограммах: ");
+    scanf("%d", &mass);
+
+    if (mass >= 60 && mass <= 90) {
+        printf("Вы можете пройти отбор.\n");
+    } else {
+        printf("Вы не можете пройти отбор.\n");
+    }
+
+    return 0;
+}

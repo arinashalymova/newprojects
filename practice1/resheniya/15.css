@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    double M;
+    double speed;
+
+    printf("Введите количество данных в МБ: ");
+    scanf("%lf", &M);
+
+    printf("Введите скорость передачи в Кбит/с: ");
+    scanf("%lf", &speed);
+
+    double dataInKbits = M * 1024 * 8;
+
+    double timeInSeconds = dataInKbits / speed;
+
+    double timeInMinutes = timeInSeconds / 60;
+
+    printf("Время передачи: %.2f минут\n", timeInMinutes);
+
+    return 0;
+}

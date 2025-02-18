@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int temperature;
+
+    printf("Введите температуру корпуса спутника: ");
+    scanf("%d", &temperature);
+
+    if (temperature >= -150 && temperature <= 120) {
+        printf("Температура в допустимом диапазоне.\n");
+    } else {
+        printf("Температура за пределами допустимого диапазона.\n");
+    }
+
+    return 0;
+}

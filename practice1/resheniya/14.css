@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int mass;
+    float moon_weight;
+
+    printf("Введите массу объекта на Земле (в килограммах): ");
+    scanf("%d", &mass);
+
+    moon_weight = mass * 9.81 * (1.0 / 6.0);
+
+    printf("Вес объекта на Луне: %.2f Ньютонов\n", moon_weight);
+
+    return 0;
+}

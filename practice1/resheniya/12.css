@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int angle;
+    printf("Введите угол: ");
+    scanf("%d", &angle);
+
+    if (angle < -180 || angle > 180) {
+        printf("Угол выходит за допустимый диапазон.\n");
+    } else {
+        printf("Угол в допустимом диапазоне.\n");
+    }
+
+    return 0;
+}
