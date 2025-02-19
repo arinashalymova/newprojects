@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+typedef struct {
+    char name[100];
+    int age;
+    float gpa;
+} Student;
+
+int main() {
+    int numberOfStudents;
+    printf("Введите количество студентов: ");
+    scanf("%d", &numberOfStudents);
+
+    Student students[numberOfStudents];
+
+    for (int i = 0; i < numberOfStudents; i++) {
+        printf("Введите имя, возраст и средний балл для студента %d: ", i + 1);
+        scanf("%s %d %f", students[i].name, &students[i].age, &students[i].gpa);
+    }
+
+    printf("\n");
+    for (int i = 0; i < numberOfStudents; i++) {
+        printf("Имя: %s\n", students[i].name);
+        printf("Возраст: %d\n", students[i].age);
+        printf("Средний балл: %.1f\n\n", students[i].gpa);
+    }
+
+    return 0;
+}
