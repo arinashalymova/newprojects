@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    char name[50];
+    int quantity;
+    float price;
+} Item;
+
+int main() {
+    int n, i;
+    printf("Введите количество товаров: ");
+    scanf("%d", &n);
+
+    Item *items = (Item *)malloc(n * sizeof(Item));
+
+    for (i = 0; i < n; i++) {
+        printf("Введите название, количество и цену товара %d: ", i + 1);
+        scanf("%s %d %f", items[i].name, &items[i].quantity, &items[i].price);
+    }
+
+    printf("\n");
+    for (i = 0; i < n; i++) {
+        printf("Item: %s\n", items[i].name);
+        printf("Quantity: %d\n", items[i].quantity);
+        printf("Price: %.2f\n\n", items[i].price);
+    }
+
+    free(items);
+    return 0;
+}
