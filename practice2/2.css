@@ -21,9 +21,9 @@ int main() {
 
     printf("\n");
     for (i = 0; i < n; i++) {
-        printf("Item: %s\n", items[i].name);
-        printf("Quantity: %d\n", items[i].quantity);
-        printf("Price: %.2f\n\n", items[i].price);
+        printf("Название: %s\n", items[i].name);
+        printf("Количество: %d\n", items[i].quantity);
+        printf("Цена: %.2f\n\n", items[i].price);
     }
 
     free(items);

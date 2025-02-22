@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct {
+    int day;
+    int month;
+    int year;
+} Date;
+
+typedef struct {
+    char event_name[100];
+    Date date;
+    char description[200];
+} Event;
+
+int main() {
+    int n;
+    printf("Введите количество событий: ");
+    scanf("%d", &n);
+
+    Event *events = malloc(n * sizeof(Event));
+
+    for (int i = 0; i < n; i++) {
+        printf("Введите событие %d (название день месяц год описание): ", i + 1);
+        scanf("%s %d %d %d %s", events[i].event_name, &events[i].date.day, &events[i].date.month, &events[i].date.year, events[i].description);
+    }
+
+    for (int i = 0; i < n; i++) {
+        printf("Событие: %s\n", events[i].event_name);
+        printf("Дата: %d/%d/%d\n", events[i].date.day, events[i].date.month, events[i].date.year);
+        printf("Описание: %s\n", events[i].description);
+        printf("\n");
+    }
+
+    free(events);
+    return 0;
+}

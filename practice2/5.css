@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+union Data {
+    int intValue;
+    float floatValue;
+    char strValue[100];
+};
+
+int main() {
+    union Data data;
+    int choice;
+
+    printf("Введите 1 для целого числа, 2 для вещественного числа, 3 для строки: ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            printf("Введите целое число: ");
+            scanf("%d", &data.intValue);
+            printf("Integer: %d\n", data.intValue);
+            break;
+        case 2:
+            printf("Введите вещественное число: ");
+            scanf("%f", &data.floatValue);
+            printf("Float: %f\n", data.floatValue);
+            break;
+        case 3:
+            printf("Введите строку: ");
+            scanf("%s", data.strValue);
+            printf("String: %s\n", data.strValue);
+            break;
+        default:
+            printf("Неправильный выбор\n");
+    }
+
+    return 0;
+}
